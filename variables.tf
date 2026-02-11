@@ -18,8 +18,8 @@ EOT
     min_resource_percent               = number
     name                               = string
     sql_pool_id                        = string
-    importance                         = optional(string, "normal")
-    max_resource_percent_per_request   = optional(number, 3)
+    importance                         = optional(string) # Default: "normal"
+    max_resource_percent_per_request   = optional(number) # Default: 3
     min_resource_percent_per_request   = optional(number)
     query_execution_timeout_in_seconds = optional(number)
   }))
