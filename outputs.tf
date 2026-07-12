@@ -1,3 +1,7 @@
+output "synapse_sql_pool_workload_groups_id" {
+  description = "Map of id values across all synapse_sql_pool_workload_groups, keyed the same as var.synapse_sql_pool_workload_groups"
+  value       = { for k, v in azurerm_synapse_sql_pool_workload_group.synapse_sql_pool_workload_groups : k => v.id }
+}
 output "synapse_sql_pool_workload_groups_importance" {
   description = "Map of importance values across all synapse_sql_pool_workload_groups, keyed the same as var.synapse_sql_pool_workload_groups"
   value       = { for k, v in azurerm_synapse_sql_pool_workload_group.synapse_sql_pool_workload_groups : k => v.importance }
